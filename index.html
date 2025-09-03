@@ -4,18 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>IDDEVELOPER Institute — Learn. Build. Create. Together.</title>
+<meta name="description" content="IDDEVELOPER is an institute and service hub for software engineering, design, game development, and brand creation. Learn, hire, or teach — together." />
 <meta name="theme-color" content="#ffffff" />
 <style>
-  /* ========== Core Theme ========== */
+  /* ================= Core Theme ================= */
   :root{
-    --bg:#ffffff; --text:#0f1115; --muted:#5b606b; --card:#f7f7f8; --line:#e9e9ef;
+    --bg:#ffffff; --text:#0f1115; --muted:#60636f; --card:#f7f7f9; --line:#ebecf2;
     --brand:#b22222; --brand-2:#8f1919; --brand-3:#ff4d4d;
-    --shadow:0 10px 30px rgba(0,0,0,.06);
-    --radius:18px;
+    --radius:18px; --shadow:0 14px 36px rgba(10,14,24,.08);
   }
   [data-theme="dark"]{
-    --bg:#0c0e12; --text:#eef0f4; --muted:#b6bcc9; --card:#12151c; --line:#1c2130;
-    --shadow:0 14px 40px rgba(0,0,0,.35);
+    --bg:#0c0e12; --text:#eef0f4; --muted:#b7bdc9; --card:#12151c; --line:#1b2130;
+    --shadow:0 18px 46px rgba(0,0,0,.35);
   }
 
   *{box-sizing:border-box}
@@ -23,33 +23,33 @@
   body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text)}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
-  .container{max-width:1100px;margin:0 auto;padding:0 18px}
-  .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);font-weight:600;font-size:.75rem}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:14px;font-weight:700;border:1px solid transparent;transition:.25s background,.25s transform,.25s border-color;cursor:pointer}
-  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 24px rgba(178,34,34,.35)}
+  .container{max-width:1140px;margin:0 auto;padding:0 18px}
+  .section{padding:76px 0}
+  .section h2{margin:0 0 8px;font-size:clamp(1.6rem,3.2vw,2.25rem);line-height:1.12}
+  .muted{color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .pill{display:inline-flex;align-items:center;gap:.45rem;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-weight:700;font-size:.75rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:14px;font-weight:800;border:1px solid transparent;transition:.25s transform,.25s background,.25s border-color;cursor:pointer}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(178,34,34,.3)}
   .btn-primary:hover{transform:translateY(-2px);background:var(--brand-2)}
   .btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
   .btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
   .grid{display:grid;gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-  .section{padding:72px 0}
-  .section h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;margin:0 0 10px}
-  .muted{color:var(--muted)}
-  .badge{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:rgba(178,34,34,.1);color:var(--brand);font-weight:700;font-size:.75rem;border:1px solid rgba(178,34,34,.18)}
-  .sr{position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap;}
+  .sr{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 
-  /* ========== Nav ========== */
-  .nav{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--bg) 86%, transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  /* ================= Nav ================= */
+  .nav{position:sticky;top:0;z-index:60;background:color-mix(in oklab,var(--bg) 88%,transparent);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
   .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-  .nav-right{display:flex;align-items:center;gap:10px}
-  .nav-links{display:none;gap:14px}
-  .nav a.link{padding:.6rem .8rem;border-radius:10px;color:var(--muted)}
+  .brand-wrap{display:flex;align-items:center;gap:10px;font-weight:900}
+  .brand-name{letter-spacing:.3px}
+  .nav-links{display:none;gap:10px}
+  .nav a.link{padding:.6rem .8rem;border-radius:12px;color:var(--muted)}
   .nav a.link:hover{color:var(--text);background:var(--card)}
-  .theme-toggle{border:1px solid var(--line);border-radius:12px;padding:.55rem .7rem;background:var(--card);cursor:pointer}
+  .theme-toggle{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:.55rem .7rem;cursor:pointer}
   @media(min-width:860px){ .nav-links{display:flex} }
 
-  /* ========== CSS Logo (Scalable) ========== */
-  .logo-css{position:relative;width:46px;height:54px}
+  /* ================= CSS Logo (scalable) ================= */
+  .logo-css{position:relative;width:48px;height:56px;color:var(--text)}
   .logo-css .bar{position:absolute;left:50%;transform:translateX(-50%);bottom:6px;width:10px;height:44px;background:var(--brand);border-radius:6px}
   .logo-css .cap{position:absolute;left:50%;transform:translateX(-50%);top:0;width:12px;height:6px;background:#111;border-radius:2px}
   [data-theme="dark"] .logo-css .cap{background:#fff}
@@ -59,89 +59,94 @@
   .logo-css .d-l{left:0;border-right:none}
   .logo-css .d-r{right:0;border-left:none}
 
-  /* ========== Hero ========== */
-  .hero{padding:80px 0 40px; position:relative; overflow:hidden}
+  /* ================= Hero ================= */
+  .hero{padding:86px 0 48px;position:relative;overflow:hidden}
   .hero-bg{position:absolute;inset:0;pointer-events:none;background:
     radial-gradient(1200px 500px at 50% -10%, rgba(178,34,34,.12), transparent 60%),
     radial-gradient(800px 400px at 90% 10%, rgba(255,77,77,.12), transparent 60%)}
   .hero-wrap{display:grid;gap:22px;align-items:center}
-  .hero h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.06;margin:0}
+  .hero h1{margin:0;font-size:clamp(2.1rem,6vw,3.3rem);line-height:1.05}
   .hero .lead{font-size:clamp(.98rem,1.8vw,1.1rem);color:var(--muted)}
   .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-  .trustbar{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:8px}
-  .trustbar .mini{display:flex;align-items:center;gap:10px}
+  .trustbar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:10px}
   .hero-img{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
   .hero-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
   @media(min-width:940px){ .hero-wrap{grid-template-columns:1.1fr .9fr} }
 
-  /* ========== Services ========== */
+  /* ================= Services ================= */
   .services .grid{grid-template-columns:1fr}
-  @media(min-width:820px){ .services .grid{grid-template-columns:repeat(3,1fr)} }
-  .service{padding:22px;text-align:left}
-  .service h3{margin:.3rem 0 .4rem;font-size:1.07rem}
-  .service p{color:var(--muted);margin:0}
-  .service .tag{margin-top:12px}
+  @media(min-width:860px){ .services .grid{grid-template-columns:repeat(3,1fr)} }
+  .service{overflow:hidden;text-align:left}
+  .service .cover{aspect-ratio:16/10}
+  .service .body{padding:16px}
+  .service h3{margin:.2rem 0 .3rem;font-size:1.06rem}
+  .service p{margin:0;color:var(--muted)}
 
-  /* ========== Achievements ========== */
+  /* ================= About duo ================= */
+  .about-grid{display:grid;gap:18px}
+  @media(min-width:920px){ .about-grid{grid-template-columns:1.1fr .9fr} }
+  .about-img{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .about-img img{aspect-ratio:4/3;object-fit:cover}
+
+  /* ================= Achievements ================= */
   .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .stat{padding:20px}
+  .stat{padding:20px;text-align:center}
   .stat .num{font-size:clamp(1.6rem,4.5vw,2.4rem);font-weight:900;color:var(--brand)}
   .stat .lbl{color:var(--muted)}
   @media(min-width:820px){ .stats{grid-template-columns:repeat(4,1fr)} }
 
-  /* ========== Projects ========== */
-  .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px 0 20px}
-  .tab{padding:.5rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--card);cursor:pointer;color:var(--muted);font-weight:700}
+  /* ================= Projects ================= */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:10px 0 20px}
+  .tab{padding:.55rem .95rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;color:var(--muted);font-weight:800}
   .tab.active{background:var(--brand);border-color:transparent;color:#fff}
   .projects-grid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:820px){ .projects-grid{grid-template-columns:repeat(3,1fr)} }
-  .project{overflow:hidden}
-  .project .cover{aspect-ratio:16/10; background:#ddd}
+  @media(min-width:860px){ .projects-grid{grid-template-columns:repeat(3,1fr)} }
+  .project .cover{aspect-ratio:16/10}
   .project .body{padding:14px;text-align:left}
   .project .body h4{margin:.1rem 0 .2rem;font-size:1.02rem}
   .project .body p{margin:0;color:var(--muted);font-size:.95rem}
 
-  /* ========== Testimonials ========== */
+  /* ================= Testimonials ================= */
   .carousel{position:relative}
   .slides{display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow:hidden;scroll-behavior:smooth;border-radius:var(--radius);border:1px solid var(--line)}
-  .slide{padding:26px;display:grid;align-items:center;background:var(--card);min-height:180px}
-  .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
-  .dot{width:8px;height:8px;border-radius:999px;background:var(--line)}
+  .slide{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;padding:18px;background:var(--card);min-height:140px}
+  .avatar{width:54px;height:54px;border-radius:999px;overflow:hidden;border:2px solid var(--line)}
+  .quote{font-style:italic}
+  .dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+  .dot{width:8px;height:8px;border-radius:999px;background:var(--line);cursor:pointer}
   .dot.active{background:var(--brand)}
 
-  /* ========== Blog ========== */
+  /* ================= Blog ================= */
   .blog-grid{display:grid;grid-template-columns:1fr;gap:16px}
-  @media(min-width:820px){ .blog-grid{grid-template-columns:repeat(3,1fr)} }
-  .blog{overflow:hidden}
+  @media(min-width:860px){ .blog-grid{grid-template-columns:repeat(3,1fr)} }
   .blog .cover{aspect-ratio:16/10}
   .blog .body{padding:14px;text-align:left}
   .blog .body h4{margin:.1rem 0 .3rem}
-  .blog .body p{margin:0;color:var(--muted)}
 
-  /* ========== CTA & Footer ========== */
-  .cta{background:linear-gradient( to right, var(--brand), var(--brand-2));color:#fff;border-radius:26px;padding:28px}
+  /* ================= CTA & Footer ================= */
+  .cta{background:linear-gradient( to right, var(--brand), var(--brand-2));color:#fff;border-radius:26px;padding:26px}
   .cta .row{display:grid;gap:16px;align-items:center}
   @media(min-width:820px){ .cta .row{grid-template-columns:1.2fr .8fr} }
   footer{padding:40px 0;color:var(--muted);border-top:1px solid var(--line)}
   .foot{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center}
 
-  /* ========== Motion (Reveal) ========== */
+  /* ================= Motion ================= */
   .reveal{opacity:0;transform:translateY(14px);transition:.7s ease}
   .reveal.show{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
+<!-- =============== NAV =============== -->
 <header class="nav">
   <div class="container nav-wrap">
-    <a href="#home" class="brand" aria-label="IDDEVELOPER home">
-      <span class="sr">IDDEVELOPER</span>
-      <div class="logo-css" aria-hidden="true" style="color:var(--text)">
+    <a href="#home" class="brand-wrap" aria-label="IDDEVELOPER home">
+      <div class="logo-css" aria-hidden="true">
         <span class="cap"></span><span class="bar"></span><span class="d-l"></span><span class="d-r"></span>
       </div>
+      <span class="brand-name">IDDEVELOPER</span>
     </a>
-    <nav class="nav-right">
+    <nav class="nav-right" style="display:flex;align-items:center;gap:10px">
       <div class="nav-links">
         <a class="link" href="#about">About</a>
         <a class="link" href="#services">Services</a>
@@ -156,79 +161,107 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- =============== HERO =============== -->
 <section id="home" class="hero section">
   <div class="hero-bg"></div>
   <div class="container hero-wrap">
     <div class="reveal">
       <span class="pill">Welcome to IDDEVELOPER Institute</span>
       <h1 style="margin-top:10px">Learn. Build. <span style="color:var(--brand)">Create.</span> Together.</h1>
-      <p class="lead">An institute and service hub for software engineering, design, game development, and digital creation — founded by CEO <strong>Idele Richmond</strong>.</p>
+      <p class="lead">A premium institute and service hub for software engineering, design, game development, and digital creation — founded by CEO <strong>Idele Richmond</strong>.</p>
       <div class="hero-cta" style="margin-top:10px">
         <a href="#services" class="btn btn-primary">Explore What We Do</a>
         <a href="#contact" class="btn btn-ghost">Start a Project</a>
       </div>
       <div class="trustbar">
-        <div class="mini"><span class="badge">Apple-tier Experience</span></div>
-        <div class="mini"><span class="badge">Student • Client • Expert</span></div>
+        <span class="pill">Student • Client • Expert</span>
+        <span class="pill">Apple-grade UX</span>
+        <span class="pill">Real Projects • Real Results</span>
       </div>
     </div>
-    <div class="hero-img reveal">
-      <!-- Placeholder image (royalty-free unsplash) -->
-      <img loading="lazy" alt="Students collaborating at IDDEVELOPER"
+    <figure class="hero-img reveal">
+      <!-- Collaborative dev team (contextual, royalty-free) -->
+      <img loading="lazy" width="1200" height="750" alt="Developers collaborating on laptops in a modern workspace"
            src="https://images.unsplash.com/photo-1523246191869-8b354930bcac?q=80&w=1200&auto=format&fit=crop" />
-    </div>
+    </figure>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- =============== ABOUT =============== -->
 <section id="about" class="section">
-  <div class="container grid" style="grid-template-columns:1fr;gap:22px">
+  <div class="container about-grid">
     <div class="reveal">
       <h2>Who We Are</h2>
-      <p class="muted">IDDEVELOPER is a learning and building institute: a place where <strong>students</strong> master digital skills, <strong>clients</strong> hire a world-class team, and <strong>experts</strong> teach, mentor, and take on jobs. Our philosophy is simple: bring people together to <em>learn</em>, <em>build</em>, and <em>create</em>.</p>
+      <p class="muted">IDDEVELOPER is where <strong>students</strong> master in-demand digital skills, <strong>clients</strong> hire a world-class team for premium delivery, and <strong>experts</strong> teach, mentor, and take on contracts. Our philosophy: <em>Learn. Build. Create. Together.</em></p>
+      <div class="grid" style="margin-top:12px">
+        <span class="pill">Hands-on Mentorship</span>
+        <span class="pill">Client-grade Engineering</span>
+        <span class="pill">Inclusive Community</span>
+      </div>
     </div>
-    <div class="card reveal" style="padding:20px;text-align:left">
-      <h3 style="margin:.2rem 0">Our Mission</h3>
-      <p class="muted">Empower talent to ship real products and brands — from idea to launch — while growing careers and the tech community.</p>
-      <div style="display:grid;gap:10px;margin-top:12px">
-        <div class="badge">Hands-on mentorship</div>
-        <div class="badge">Client-grade delivery</div>
-        <div class="badge">Inclusive community</div>
+    <figure class="about-img reveal">
+      <!-- Classroom/mentorship vibe -->
+      <img loading="lazy" width="1200" height="900" alt="Mentor guiding students during a coding session"
+           src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop" />
+    </figure>
+  </div>
+  <div class="container" style="margin-top:18px">
+    <div class="card grid" style="padding:18px;grid-template-columns:72px 1fr;align-items:center">
+      <figure class="avatar" style="width:64px;height:64px;border-radius:999px;overflow:hidden;border:2px solid var(--line)">
+        <!-- Placeholder portrait representing leadership -->
+        <img loading="lazy" width="256" height="256" alt="Portrait placeholder representing CEO Idele Richmond"
+             src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=400&auto=format&fit=crop" />
+      </figure>
+      <div>
+        <strong>Idele Richmond — CEO</strong>
+        <p class="muted" style="margin:4px 0 0">Leading the vision to train creators and ship products that matter.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- =============== SERVICES =============== -->
 <section id="services" class="section services">
   <div class="container">
     <h2 class="reveal">What We Offer</h2>
-    <p class="muted reveal">Choose your path — Student, Client, or Expert — and grow with us.</p>
-    <div class="grid" style="margin-top:18px">
+    <p class="muted reveal">Choose your path and grow with us.</p>
+
+    <div class="grid" style="margin-top:16px">
+      <!-- Students -->
       <article class="card service reveal">
-        <span class="badge">For Students</span>
-        <h3>Learn Software • Design • Games</h3>
-        <p>Structured courses, project sprints, code reviews, and a mentor by your side.</p>
-        <div class="tag badge">Certificate • Portfolio • Career</div>
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Student learning to code on a laptop"
+             src="https://images.unsplash.com/photo-1518933165971-611dbc9c412d?q=80&w=1200&auto=format&fit=crop" />
+        <div class="body">
+          <span class="pill">For Students</span>
+          <h3>Software • Design • Games</h3>
+          <p>Structured courses, project sprints, code reviews, and a mentor by your side. Build a portfolio employers love.</p>
+        </div>
       </article>
+      <!-- Clients -->
       <article class="card service reveal">
-        <span class="badge">For Clients</span>
-        <h3>Websites • Apps • Branding</h3>
-        <p>Hire our team to ship premium products: strategy, UX/UI, development, and launch.</p>
-        <div class="tag badge">Fast • Premium • Reliable</div>
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Designers collaborating over app wireframes"
+             src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" />
+        <div class="body">
+          <span class="pill">For Clients</span>
+          <h3>Websites • Apps • Branding</h3>
+          <p>Hire our team to ship premium products: strategy, UX/UI, development, and launch — fast and reliable.</p>
+        </div>
       </article>
+      <!-- Experts -->
       <article class="card service reveal">
-        <span class="badge">For Experts</span>
-        <h3>Teach • Mentor • Take Contracts</h3>
-        <p>Join our talent network, lead classes, and work on client projects with pay.</p>
-        <div class="tag badge">Flexible • Impactful</div>
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Mentor teaching a small developer group"
+             src="https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1200&auto=format&fit=crop" />
+        <div class="body">
+          <span class="pill">For Experts</span>
+          <h3>Teach • Mentor • Take Contracts</h3>
+          <p>Join our talent network, lead classes, and work on paid client projects. Make impact and grow your brand.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= ACHIEVEMENTS ================= -->
+<!-- =============== ACHIEVEMENTS =============== -->
 <section id="achievements" class="section">
   <div class="container">
     <h2 class="reveal">Our Achievements</h2>
@@ -242,7 +275,7 @@
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- =============== PROJECTS =============== -->
 <section id="projects" class="section">
   <div class="container">
     <h2 class="reveal">Projects</h2>
@@ -255,7 +288,7 @@
     <div class="projects-grid">
       <!-- Ongoing -->
       <article class="card project reveal" data-type="ongoing">
-        <img class="cover" alt="Ongoing e-learning platform"
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Developers shipping an e-learning platform"
              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" />
         <div class="body">
           <h4>E-Learning Platform</h4>
@@ -263,17 +296,17 @@
         </div>
       </article>
       <article class="card project reveal" data-type="ongoing">
-        <img class="cover" alt="Ongoing fintech dashboard"
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Analytics UI on desktop screens"
              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" />
         <div class="body">
           <h4>Fintech Dashboard</h4>
-          <p>Secure analytics & payments with premium UX/UI.</p>
+          <p>Secure analytics & payments with premium UX/UI and performance.</p>
         </div>
       </article>
 
       <!-- Done -->
       <article class="card project reveal" data-type="done">
-        <img class="cover" alt="Completed brand website"
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Minimal brand website on a monitor"
              src="https://images.unsplash.com/photo-1529336953121-ad5a08e5a1ab?q=80&w=1200&auto=format&fit=crop" />
         <div class="body">
           <h4>Brand Website</h4>
@@ -281,7 +314,7 @@
         </div>
       </article>
       <article class="card project reveal" data-type="done">
-        <img class="cover" alt="Completed mobile app"
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Health app mockups on phones"
              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop" />
         <div class="body">
           <h4>Health App</h4>
@@ -289,7 +322,7 @@
         </div>
       </article>
       <article class="card project reveal" data-type="done">
-        <img class="cover" alt="Completed indie game"
+        <img class="cover" loading="lazy" width="1200" height="750" alt="Indie game controller and neon lights"
              src="https://images.unsplash.com/photo-1605901309584-818e25960a8b?q=80&w=1200&auto=format&fit=crop" />
         <div class="body">
           <h4>Indie Learning Game</h4>
@@ -300,74 +333,36 @@
   </div>
 </section>
 
-<!-- ================= REVIEWS ================= -->
+<!-- =============== REVIEWS =============== -->
 <section id="reviews" class="section">
   <div class="container">
     <h2 class="reveal">What People Say</h2>
     <div class="carousel reveal">
       <div class="slides" id="slides">
-        <blockquote class="slide">“IDDEVELOPER gave me the skills and confidence to land my first developer role. The mentorship is the difference.” — <strong>Favour, Student</strong></blockquote>
-        <blockquote class="slide">“They shipped a beautiful, fast website for our brand. Communication was elite from day one.” — <strong>Amaka, Client</strong></blockquote>
-        <blockquote class="slide">“Teaching here is rewarding — real projects, real outcomes, a community that cares.” — <strong>Uche, Mentor</strong></blockquote>
-      </div>
-      <div class="dots" id="dots" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BLOG ================= -->
-<section id="blog" class="section">
-  <div class="container">
-    <h2 class="reveal">From Our Blog</h2>
-    <p class="muted reveal">Insights on learning, building, and creating in tech.</p>
-    <div class="blog-grid">
-      <article class="card blog reveal">
-        <img class="cover" alt="Coding journey cover"
-             src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" />
-        <div class="body">
-          <h4>Kickstart Your Coding Journey</h4>
-          <p>Practical steps, resources, and a 30-day roadmap.</p>
-        </div>
-      </article>
-      <article class="card blog reveal">
-        <img class="cover" alt="Game dev future"
-             src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=1200&auto=format&fit=crop" />
-        <div class="body">
-          <h4>The Future of Game Development</h4>
-          <p>Engines, AI tools, and where to focus in 2025.</p>
-        </div>
-      </article>
-      <article class="card blog reveal">
-        <img class="cover" alt="Client success"
-             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" />
-        <div class="body">
-          <h4>Why Clients Trust IDDEVELOPER</h4>
-          <p>Our delivery process from discovery to launch.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT / CTA ================= -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="cta card reveal">
-      <div class="row">
-        <div style="text-align:left">
-          <h2 style="margin:0 0 6px">Ready to build with us?</h2>
-          <p class="muted" style="margin:0 0 14px">Students, Clients, and Experts — there’s a seat for you at IDDEVELOPER.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a href="#services" class="btn btn-ghost">Join as Student</a>
-            <a href="#services" class="btn btn-ghost">Hire as Client</a>
-            <a href="#services" class="btn btn-ghost">Work with Us</a>
+        <div class="slide">
+          <figure class="avatar">
+            <img loading="lazy" width="128" height="128" alt="Happy student avatar"
+                 src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=256&auto=format&fit=crop" />
+          </figure>
+          <div>
+            <p class="quote">“IDDEVELOPER gave me the skills and confidence to land my first developer role. The mentorship is the difference.”</p>
+            <p class="muted" style="margin:.2rem 0 0">Favour — Student</p>
           </div>
         </div>
-        <form id="contactForm" class="card" style="padding:14px;border:none;background:transparent">
-          <label class="sr" for="name">Name</label>
-          <input id="name" name="name" required placeholder="Your name" style="width:100%;margin:6px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)">
-          <label class="sr" for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="Your email" style="width:100%;margin:6px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)">
-          <label class="sr" for="message">Message</label>
-          <textarea id="message" name="message" rows="3" required placeholder="Tell us what you need…" style="width:100%;margin:6px 0 10px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text)"></textarea>
-          <button class="btn btn-primary" type="submit" id="sendBtn">Send 
+        <div class="slide">
+          <figure class="avatar">
+            <img loading="lazy" width="128" height="128" alt="Client avatar"
+                 src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop" />
+          </figure>
+          <div>
+            <p class="quote">“They shipped a beautiful, fast website for our brand. Communication was elite from day one.”</p>
+            <p class="muted" style="margin:.2rem 0 0">Amaka — Client</p>
+          </div>
+        </div>
+        <div class="slide">
+          <figure class="avatar">
+            <img loading="lazy" width="128" height="128" alt="Mentor avatar"
+                 src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop" />
+          </figure>
+          <div>
+            <p class="quote">“Teach
