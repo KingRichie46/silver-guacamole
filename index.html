@@ -1,129 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDDEVELOPER Institute</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #fdfdfd;
-      color: #111;
-      overflow-x: hidden;
-    }
-
+    body { margin:0; font-family:Arial, sans-serif; }
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(255,255,255,0.9);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1rem 2rem; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      position:sticky; top:0; z-index:1000;
     }
-
-    header img {
-      height: 45px;
+    header img { height:40px; }
+    nav a {
+      margin-left:1.5rem; text-decoration:none; color:#333; font-weight:600;
     }
-
-    header nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #111;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    header nav a:hover {
-      color: #b22222;
-    }
+    nav a:hover { color:#c00; }
 
     .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-      padding: 0 1rem;
-      background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      position: relative;
+      background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height:100vh; color:#fff; display:flex; flex-direction:column;
+      justify-content:center; align-items:center; text-align:center;
+      position:relative;
     }
-
     .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
+      content:""; position:absolute; top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.6);
     }
+    .hero > * { position:relative; z-index:1; }
+    .hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+    .hero p { font-size:1.2rem; margin-bottom:2rem; }
+    .hero .btn {
+      background:#c00; color:#fff; padding:0.8rem 1.5rem;
+      border-radius:30px; margin:0.5rem; border:none; cursor:pointer;
+      font-size:1rem; font-weight:600;
+    }
+    .hero .btn:hover { background:#900; }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      color: white;
+    .achievements {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+      gap:2rem; padding:4rem 2rem; background:#f9f9f9; text-align:center;
     }
-
-    .hero img {
-      width: 100px;
-      margin-bottom: 1rem;
+    .achievement {
+      background:#fff; padding:2rem; border-radius:12px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0 0.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      background: #b22222;
-      color: white;
-      transition: background 0.3s ease;
-    }
-
-    .hero .buttons a:hover {
-      background: #8b1a1a;
-    }
+    .achievement h2 { color:#c00; font-size:2rem; margin-bottom:0.5rem; }
+    .achievement p { color:#555; font-size:1rem; }
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <img src="logo.png" alt="IDDEVELOPER Logo" />
+    <img src="your-logo.png" alt="IDDEVELOPER Logo">
     <nav>
       <a href="#about">About</a>
-      <a href="#achievements">Achievements</a>
       <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
       <a href="#reviews">Reviews</a>
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-content">
-      <img src="logo.png" alt="IDDEVELOPER Logo" />
-      <h1>Welcome to <span style="color:#ff5555;">IDDEVELOPER Institute</span></h1>
-      <p>Learn. Build. Create. Together.</p>
-      <div class="buttons">
-        <a href="#students">Join as Student</a>
-        <a href="#clients">Hire as Client</a>
-        <a href="#workers">Work with Us</a>
-      </div>
+    <h1>Welcome to <span style="color:#ff3333;">IDDEVELOPER Institute</span></h1>
+    <p>Learn. Build. Create. Together.</p>
+    <div>
+      <button class="btn">Join as Student</button>
+      <button class="btn">Hire as Client</button>
+      <button class="btn">Work with Us</button>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="achievements">
+    <div class="achievement">
+      <h2>500+</h2>
+      <p>Students Trained</p>
+    </div>
+    <div class="achievement">
+      <h2>120+</h2>
+      <p>Projects Completed</p>
+    </div>
+    <div class="achievement">
+      <h2>50+</h2>
+      <p>Happy Clients</p>
+    </div>
+    <div class="achievement">
+      <h2>10+</h2>
+      <p>Awards & Recognitions</p>
     </div>
   </section>
 </body>
